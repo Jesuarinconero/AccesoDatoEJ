@@ -5,19 +5,8 @@ public class Alumno {
 
     String nombreCiclo;
     Double nota;
-    Alumno(){
-        this.nombreApellido=nombreApellido;
-        this.edad = edad;
-        this.nombreCiclo=nombreCiclo;
-        this.nota=nota;
 
 
-
-    }
-
-    public Alumno(String dato, String dato1, String dato2) {
-
-    }
 
     public Alumno(String dato, String dato1, String dato2, String dato3) {
          nombreApellido = dato;
@@ -60,11 +49,13 @@ public class Alumno {
 
     @Override
     public String toString() {
-        return "Alumno{" +
+        return
                 "nombreApellido='" + nombreApellido + '\'' +
                 ", edad=" + edad +
                 ", nombreCiclo='" + nombreCiclo + '\'' +
-                ", nota=" + nota +
-                '}';
+                ", nota=" + nota ;
+    }
+    public String toCSV() {
+        return nombreApellido + "," + edad + "," + nombreCiclo + "," + nota;
     }
 }
